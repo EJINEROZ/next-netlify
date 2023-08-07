@@ -17,7 +17,7 @@ export default function Home() {
    <div className='mx-auto max-w-2xl px-4 my-10'>
     <h1>Contact Us!</h1>
 
-    <form  onSubmit={handleSubmit} netlify="true">
+    <form  onSubmit={handleSubmit} netlify>
       <div className='w-full flex flex-col my-4'>
         <label className='font-bold text-white-800' htmlFor='name'>Name</label>
         <input type='text'
