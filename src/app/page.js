@@ -2,29 +2,12 @@
 import Image from 'next/image'
 
 export default function Home() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-  
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-    
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => console.log("Form successfully submitted"))
-      .catch((error) => alert(error));
-  };
-  
-  document
-    .querySelector("form")
-    .addEventListener("submit", handleSubmit);
   
   return (
      <div className="bg-white p-8 rounded-lg shadow-md w-96">
     <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
-    <form name="contact" method="post" data-netlify='true'>
+    <form name="contact" method="post">
+    <input type="hidden" name="form-name" value="contact" />
       <div className="mb-4">
         <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
         <input type="text" id="name" name="name" className="mt-1 p-2 border rounded-md w-full focus:ring focus:ring-blue-300" />
