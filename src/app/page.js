@@ -14,8 +14,8 @@ export default function Home() {
     // console.log(data);
   }
   return (
-   <div>
-    <h1>Contact Us!</h1>
+
+     <div className="bg-white p-8 rounded-lg shadow-md w-96">
     {/* <form name="contact" method="post">
           <input type="hidden" name="form-name" value="contact" />
           <p>
@@ -32,37 +32,23 @@ export default function Home() {
           </p>
         </form> */}
 
-    <form  onSubmit={handleSubmit} netlify="true">
-      <div className='w-full flex flex-col my-4'>
-        <label className='font-bold text-white-800' htmlFor='name'>Name</label>
-        <input type='text'
-        required
-        minLength={5}
-        maxLength={150}
-        className='p-4 bg-gray-50 border-gray-100' id='name' />
+    <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
+    <form>
+      <div className="mb-4">
+        <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
+        <input type="text" id="name" name="name" className="mt-1 p-2 border rounded-md w-full focus:ring focus:ring-blue-300" />
       </div>
-      <div className='w-full flex flex-col my-4'>
-        <label className='font-bold text-white-800' htmlFor='email'>Email</label>
-        <input type='email' 
-        required
-        minLength={15}
-        maxLength={150}
-        className='p-4 bg-gray-50 border-gray-100' autoComplete='off' id='email' />
-      </div> 
-      <div>
-      <label className='font-bold text-white-800' htmlFor='message'>Message</label>
-      <textarea
-      rows={4}
-      required
-      minLength={10}
-      maxLength={500}
-      name='message'
-      className='w-full p-4 bg-gray-50 border-gray-100'/> 
+      <div className="mb-4">
+        <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+        <input type="email" id="email" name="email" className="mt-1 p-2 border rounded-md w-full focus:ring focus:ring-blue-300" />
       </div>
-      <button
-      type='submit'
-      className='px-4 py-2 w-40 bg-gray-700 text-white font-medium mt-4'>Send Message</button>
+      <div className="mb-4">
+        <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
+        <textarea id="message" name="message" rows="4" className="mt-1 p-2 border rounded-md w-full resize-none focus:ring focus:ring-blue-300"></textarea>
+      </div>
+      <button type="submit"  className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300">Submit</button>
     </form>
-   </div>
+  </div>
   );
 }
+
