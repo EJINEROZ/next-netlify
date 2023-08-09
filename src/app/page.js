@@ -2,21 +2,21 @@
 import Image from 'next/image'
 
 export default function Home() {
-//   async function handleSubmit(event) {
-//     event.preventDefault();
+  async function handleSubmit(event) {
+    event.preventDefault();
 
-//     const data = {
-//       name: String(event.target.name.value),
-//       email: String(event.target.email.value),
-//       message: String(event.target.message.value),
+    // const data = {
+    //   name: String(event.target.name.value),
+    //   email: String(event.target.email.value),
+    //   message: String(event.target.message.value),
 
-//     };
-//     console.log(data);
-//   }
+    // };
+    // console.log(data);
+  }
   return (
    <div>
     <h1>Contact Us!</h1>
-    <form name="contact" method="post">
+    {/* <form name="contact" method="post">
           <input type="hidden" name="form-name" value="contact" />
           <p>
             <label>Your Name: <input type="text" name="name"/></label>
@@ -30,9 +30,9 @@ export default function Home() {
           <p>
             <button type="submit">Send</button>
           </p>
-        </form>
+        </form> */}
 
-    {/* <form  onSubmit={handleSubmit} netlify>
+    <form  onSubmit={handleSubmit} netlify="true">
       <div className='w-full flex flex-col my-4'>
         <label className='font-bold text-white-800' htmlFor='name'>Name</label>
         <input type='text'
@@ -62,7 +62,7 @@ export default function Home() {
       <button
       type='submit'
       className='px-4 py-2 w-40 bg-gray-700 text-white font-medium mt-4'>Send Message</button>
-    </form> */}
+    </form>
    </div>
   );
 }
